@@ -1,0 +1,24 @@
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  
+</head>
+
+<div>
+  <div class="split right">
+    <div class="centered">
+      <h2 style="font-family: Montserrat, sans-serif;">Card List</h2>
+      <div *ngFor="let card of cards">
+        
+          <div class="output-box">
+            <h3>{{ card.name }}</h3>
+            <p>{{ card.age }} {{card.age2}}</p>
+            <p>Student: {{card.student}}</p>
+            <p>{{card.school}}</p>
+
+        </div><br>
+      </div>
+    </div>
+  </div>
+
+
+</div>

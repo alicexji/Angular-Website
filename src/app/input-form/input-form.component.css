@@ -1,0 +1,116 @@
+/* You can add global styles to this file, and also import other style files */
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    background-color: #bac5de;
+  }
+  
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    /*transform: translate(-50%, -50%);*/
+    text-align: left;
+  }
+
+  
+  .input-form {
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+    background-color: #dce5f4; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 14px 18px rgba(19, 12, 12, 0.3); /* Box shadow for depth */
+    padding: 20px; /* Padding inside the box */
+    width: 550px; /* Width of the box */
+    height: 650px; /* Height of the box */
+    color: #333; /* Text color */
+    line-height: 1; /* Line height for better readability */
+  }
+
+  .input-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .input-form input[type="text"],
+  .input-form input[type="number"],
+  .input-form select {
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .input-form select {
+    /*appearance: none;*/
+    width: 30%;
+  }
+  
+  /* Radio Buttons 
+  .input-form input[type="radio"] {
+    margin-right: 5px;
+  } */
+
+  .input-form input[type="radio"] {
+    display: none;
+  }
+  
+  /* Style the custom radio button */
+  .input-form input[type="radio"] + label {
+    position: relative;
+    display: inline-block;
+    padding-left: 30px; /* Space for the custom radio button */
+    margin-bottom: 15px; /* Adjust spacing between radio buttons */
+    cursor: pointer;
+  }
+  
+  /* Style the custom radio button indicator */
+  .input-form input[type="radio"] + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* Size of the radio button indicator */
+    height: 20px; /* Size of the radio button indicator */
+    background-color: #fff; /* Background color of the radio button indicator */
+    border-radius: 50%; /* Make it round */
+  }
+
+  .input-form input[type="radio"]:checked + label::before {
+    background-color: #9095ad; /* Change background color when selected */
+  }
+  
+  /* Submit Button */
+  .input-form button {
+    display: block;
+    width: 30%;
+    padding: 10px;
+    background-color: #9095ad;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .input-form button:hover {
+    background-color: #7d8fb4;
+  }

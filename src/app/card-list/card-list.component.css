@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+    background-color: #bac5de;
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    /*transform: translate(-50%, -50%); */
+    text-align: left;
+  }
+  
+  .output-box {
+    background-color: #dce5f4; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 14px 18px rgba(19, 12, 12, 0.3); /* Box shadow for depth */
+    padding: 20px; /* Padding inside the box */
+    width: 300px; /* Width of the box */
+    height: 140px; /* Height of the box */
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+    color: #333; /* Text color */
+    line-height: 0.6; /* Line height for better readability */
+    overflow: auto; /* Enable scrolling if content exceeds box dimensions */
+    word-wrap: break-word; /* Wrap long words onto the next line */
+  }

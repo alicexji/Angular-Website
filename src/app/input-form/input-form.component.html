@@ -1,0 +1,42 @@
+<head>
+  <meta charset="utf-8">
+</head>
+
+<div>
+  <div class="split left">
+    <div class="centered">
+      <div class="input-form">
+        <h2>Input Form</h2><br>
+        <form (ngSubmit)="submitForm()" #myForm="ngForm">
+          <label for="name">* Name:</label><br />
+          <input type="text" id="name" name="name" [(ngModel)]="newCard.name" required #name="ngModel"/><br /><br />
+          
+          <label for="age">* Age:</label><br />
+
+          <input type="number" id="age" name="age" min="1" max="125" [(ngModel)]="newCard.age" required required #age="ngModel"/>
+          <select id="ageUnit" name="ageUnit" [(ngModel)]="newCard.age2" required #age2="ngModel">
+            <option value="years">Years</option>
+            <option value="months">Months</option>
+          </select><br /><br />
+
+          <label>* Is this person a student?</label><br>
+          <input type="radio" id="studentYes" name="isStudent" value="yes" [(ngModel)]="newCard.student" required required #student="ngModel" (change)="toggleSchoolField($event)">
+          <label for="studentYes">Yes</label><br>
+          <input type="radio" id="studentNo" name="isStudent" value="no" [(ngModel)]="newCard.student" required required #student="ngModel" (change)="toggleSchoolField($event)">
+          <label for="studentNo">No</label><br><br>
+
+          
+          <div *ngIf="showSchoolField">
+            <div id="schoolField">
+              <label for="school">School: </label>
+              <input type="text" id="school" name="school" minlength="1" maxlength="200" [(ngModel)]="newCard.school"><br><br>
+            </div>
+          </div>
+
+          <button type="submit" [disabled]="myForm.invalid">Add Card</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
