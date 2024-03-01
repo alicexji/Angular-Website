@@ -5,6 +5,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   templateUrl: './input-form.component.html',
   styleUrls: ['./input-form.component.css']
 })
+
 export class InputFormComponent {
   newCard: any = {};
   myForm: any = {};
@@ -25,18 +26,9 @@ export class InputFormComponent {
 
 
   
-
   toggleSchoolField(event: Event) {
     const target = event.target as HTMLInputElement;
     this.showSchoolField = target.value === 'yes';
-    const schoolInput = document.getElementById("school") as HTMLInputElement;
-
-    if (this.showSchoolField) {
-      schoolInput.disabled = false;
-      schoolInput.required = true; // Make school field required if student is selected
-    } else {
-      schoolInput.disabled = true;
-      schoolInput.required = false; // Make school field optional if student is not selected
-    }
+    
   }
 }
