@@ -1,27 +1,18 @@
 # AngularWebsite
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
+Angular website with two additional components input-form and card-list.
 
-## Development server
+# Specifications
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Create an Angular website that displays an input form on the left side of the page with the below fields and an Add button. On the right side of the page should be a list of cards (which by default will be empty at first). After the user populates the fields and the Add button is clicked, a new card should be created with the information the user added and it should be added to the list. The user should be able to add multiple cards to the list.
 
-## Code scaffolding
+# Requirements
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+User input form:
+- Name (Required text field, character limit: 1 to 100 characters)
+- Age (Required combination text field and drop-down field. The text field should be limited to  numbers between 1 and 125. The drop-down field should contain pre-populated options for year or month.)
+- Is this person a student? (Required yes/no radio button)
+- School (text field, character limit: 1 to 200 characters, by default this field should be disabled or not visible)
+    - If the Yes option is selected in the student question, this text field should either be enabled or displayed.
+    - This should be an optional field, meaning the user is not required to enter a value.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
